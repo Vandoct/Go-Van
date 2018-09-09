@@ -14,7 +14,7 @@ public class GreatCircleDistance {
                 map[i][j] = " X ";
             }
         }
-
+        
         map[driverX][driverY] = " D ";
         map[passengerX][passengerY] = " P ";
 
@@ -29,71 +29,7 @@ public class GreatCircleDistance {
         showMap(map);
 
     }
-    
-    static void findWays(String[][] map, int driverX, int driverY, int passengerX, int passengerY) {
-        if (driverX < passengerX & driverY < passengerY) {
-            while (driverX < passengerX) {
-                map[driverX + 1][driverY] = " O ";
-                driverX++;
-            }
-
-            while (driverY < passengerY) {
-                map[driverX][driverY] = " O ";
-                driverY++;
-            }
-        } else if (passengerX < driverX & passengerY < driverY) {
-            while (passengerX < driverX) {
-                map[driverX - 1][driverY] = " O ";
-                driverX--;
-            }
-
-            while (passengerY < driverY) {
-                map[driverX][driverY] = " O ";
-                driverY--;
-            }
-        } else if (driverX > passengerX & driverY < passengerY) {
-            while (driverX > passengerX) {
-                map[driverX - 1][driverY] = " O ";
-                driverX--;
-            }
-
-            while (driverY < passengerY) {
-                map[driverX][driverY] = " O ";
-                driverY++;
-            }
-        } else if (passengerX > driverX & passengerY < driverY) {
-            while (passengerX > driverX) {
-                map[driverX+1][driverY] = " O ";
-                driverX++;
-            }
-            
-            while (passengerY < driverY) {
-                map[driverX][driverY] = " O ";
-                driverY--;
-            }
-        } else if (driverX < passengerX | driverX > passengerX) {
-            while (driverX < passengerX-1 & !map[driverX][driverY].equalsIgnoreCase("P")) {
-                driverX++;
-                map[driverX][driverY] = " O ";
-            }
-            
-            while (driverX > passengerX+1 & !map[driverX][driverY].equalsIgnoreCase("P")) {
-                driverX--;
-                map[driverX][driverY] = " O ";
-            }
-        } else {
-            while (driverY < passengerY-1 & !map[driverX][driverY].equalsIgnoreCase("P")) {
-                driverY++;
-                map[driverX][driverY] = " O ";
-            }
-            
-            while (driverY > passengerY+1 & !map[driverX][driverY].equalsIgnoreCase("P")) {
-                driverY--;
-                map[driverX][driverY] = " O ";
-            }
-        }
-    }
-    
+   
     static void findWay(String[][] map, int driverX, int driverY, int passengerX, int passengerY) {
         if (driverX < passengerX & driverY < passengerY) {
             while (driverX < passengerX) {
