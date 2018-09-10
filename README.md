@@ -58,8 +58,8 @@
 	Your Balance : Rp.200000
 	
 # <a name="todo"></a>TODO
-  -[X] Order a driver
-  -[X] Check balance
-  -[ ] Add many driver
-  -[ ] Get the closest distance
+  - [x] Order a driver
+  - [x] Check balance
+  - [ ] Add many driver
+  - [ ] Get the closest distance
 	
