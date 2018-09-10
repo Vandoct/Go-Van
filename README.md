@@ -3,8 +3,8 @@
   Go-Van still lacks of features, it only can do order a driver and check balance.
 
 # Table of Contents
-  [Application Overview](#app-view)
-  [TODO](#todo)
+  * [Application Overview](#app-view)
+  * [TODO](#todo)
   
 # <a name="app-view"></a>Application Overview
 	========================================
